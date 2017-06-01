@@ -12,7 +12,7 @@
   </head>
   <body>
   <h1>Welcome</h1>
-  <h2><a href="/html/login.html">Login</a></h2>
+  <h2><a href="/login">Login</a></h2>
   <h2><a href="/html/register.html">Register</a></h2>
   </body>
 </html>

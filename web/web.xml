@@ -6,11 +6,21 @@
 
     <display-name>Spring MVC Application</display-name>
 
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>WebApplication</servlet-name>
         <servlet-class>
             org.springframework.web.servlet.DispatcherServlet
         </servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/web/WEB-INF/applicationContext.xml</param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
@@ -19,9 +29,4 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <listener>
-        <listener-class>
-            org.springframework.web.context.ContextLoaderListener
-        </listener-class>
-    </listener>
 </web-app>

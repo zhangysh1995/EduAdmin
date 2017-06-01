@@ -1,5 +1,6 @@
 package controllers;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -12,6 +13,7 @@ import roles.impl.Teacher;
 /**
  * Created by KellyZhang on 2017/6/1.
  */
+@Controller
 public class TeacherController {
     // auto-generated stub
 

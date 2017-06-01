@@ -1,5 +1,6 @@
 package controllers;
 
+import database.StudentManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -16,7 +17,7 @@ import roles.impl.Student;
 
 @Controller
 public class StudentController {
-    // auto-generated stub
+    // auto-generated stubs
 
     @RequestMapping(value="/student/register", method= RequestMethod.GET)
     public ModelAndView showForm()
@@ -32,6 +33,8 @@ public class StudentController {
 
         model.addAttribute("username", student.getUsername());
         model.addAttribute("password", student.getPassword());
+
+        StudentManager.add(student);
         return "/users/me";
     }
 

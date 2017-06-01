@@ -27,7 +27,7 @@
             <td><form:input path="name" /></td>
         </tr>
         <tr>
-            <td><form:label path="teacherNo">Student number</form:label></td>
+            <td><form:label path="teacherNo">Teacher number</form:label></td>
             <td><form:input path="teacherNo" /></td>
         </tr>
         <tr>

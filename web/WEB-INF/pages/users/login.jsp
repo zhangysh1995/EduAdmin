@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: KellyZhang
@@ -11,6 +12,23 @@
     <title>Title</title>
 </head>
 <body>
+    <form:form method="POST" action="/loginAction.do">
+        <table>
+            <tr>
+                <td><label>Username</label></td>
+                <td><input name="username" type="text" class="text"></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input name="password" type="password" class="text"></td>
+            </tr>
+            <tr>
+                <input type="submit" value="Submit" />
+                <input type="reset"  value="Reset" />
+            </tr>
+        </table>
+
+    </form:form>
 
 </body>
 </html>
