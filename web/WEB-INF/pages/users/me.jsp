@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-
+Your username is: ${username}
+Your password is: ${password}
 </body>
 </html>

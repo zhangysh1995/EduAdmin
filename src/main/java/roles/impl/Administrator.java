@@ -16,7 +16,6 @@ public class Administrator implements Person {
         this.name = name;
     }
 
-    @Override
     public String getRole() {
         return "admin";
     }

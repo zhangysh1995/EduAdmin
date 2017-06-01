@@ -6,17 +6,12 @@ import roles.Person;
  * Created by KellyZhang on 2017/5/31.
  */
 public class Student implements Person {
+    String username;
+    String password;
+    String name;
     int studentNo;
     int dept;
-    String name;
 
-    public Student(int studentNo, int dept, String name) {
-        this.studentNo = studentNo;
-        this.dept = dept;
-        this.name = name;
-    }
-
-    @Override
     public String getRole() {
         return "student";
     }
@@ -43,5 +38,21 @@ public class Student implements Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

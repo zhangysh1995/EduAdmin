@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>University Teaching Administration Platform</title>
+    <title>University Teaching Admin Platform</title>
   </head>
   <body>
-  <h1>test</h1>
+  <h1>Welcome</h1>
+  <h2><a href="/html/login.html">Login</a></h2>
+  <h2><a href="/html/register.html">Register</a></h2>
   </body>
 </html>

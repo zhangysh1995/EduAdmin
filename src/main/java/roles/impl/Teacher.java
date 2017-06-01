@@ -7,17 +7,13 @@ import roles.Person;
  */
 public class Teacher implements Person {
     // auto-generated stub
+    String username;
+    String password;
+    String name;
     int teacherNo;
     int dept;
-    String name;
+;
 
-    public Teacher(int teacherNo, int dept, String name) {
-        this.teacherNo = teacherNo;
-        this.dept = dept;
-        this.name = name;
-    }
-
-    @Override
     public String getRole() {
         return "teacher";
     }
@@ -44,5 +40,21 @@ public class Teacher implements Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
