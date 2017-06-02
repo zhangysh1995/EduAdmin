@@ -1,5 +1,6 @@
 package controllers;
 
+import database.TeacherManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -31,6 +32,8 @@ public class TeacherController {
 
         model.addAttribute("username", teacher.getUsername());
         model.addAttribute("password", teacher.getPassword());
+
+        TeacherManager.add(teacher);
         return "/users/me";
     }
 

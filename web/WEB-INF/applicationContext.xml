@@ -21,4 +21,5 @@
     <bean id="teacherDAO" class="database.TeacherManager">
         <property name="jdbcTemplate" ref="jdbcTemplate" />
     </bean>
+
 </beans>

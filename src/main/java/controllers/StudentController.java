@@ -2,6 +2,7 @@ package controllers;
 
 import database.StudentManager;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -38,4 +39,21 @@ public class StudentController {
         return "/users/me";
     }
 
+    @RequestMapping(value="/student/login", method=RequestMethod.GET)
+    public String validate(Model model,
+//                           @RequestParam(value = "username", defaultValue = "") String username,
+//                           @RequestParam(value = "password", defaultValue = "") String password) {
+
+                        @ModelAttribute("username") String username, @ModelAttribute("password") String password)
+    {
+
+        System.out.println("username: " + username + " password: " + password);
+
+        if (StudentManager.validate(username, password)) {
+            model.addAttribute("username", username);
+            model.addAttribute("password", password);
+            return "/users/me";
+        }
+        else return "/users/loginFailed";
+    }
 }

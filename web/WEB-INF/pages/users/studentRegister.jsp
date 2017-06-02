@@ -20,7 +20,7 @@
         </tr>
         <tr>
             <td><form:label path="password">Password</form:label></td>
-            <td><form:input path="password" /></td>
+            <td><form:input type="password" path="password" /></td>
         </tr>
         <tr>
             <td><form:label path="name">Name</form:label></td>
