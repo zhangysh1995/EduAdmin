@@ -6,7 +6,6 @@ import roles.impl.Student;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 
 /**
  * Created by KellyZhang on 2017/6/1.
@@ -30,25 +29,24 @@ public class StudentManager {
 
     }
 
-    public static boolean validate(String username, String password) {
+    public static Student validate(String username, String password) {
         String sql="select * from student where username='" + username + "' and password='" + password + "';";
 //        jdbcTemplate.query(sql, handler);
         System.out.println("username: " + username + " password: " + password);
 
-        List<String> strLst  = jdbcTemplate.query(sql,new RowMapper() {
+        Student student  = (Student)jdbcTemplate.queryForObject(sql,new RowMapper() {
             public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
-                System.out.println("No. of rows: "+rowNum);
-                return rs.getString(1);
+                Student student = new Student();
+                student.setUsername(rs.getString("username"));
+                student.setPassword(rs.getString("password"));
+                student.setName(rs.getString("name"));
+                student.setStudentNo(rs.getInt("studentNo"));
+                student.setDept(rs.getInt("deptNo"));
+                return student;
             }
         });
 
-        return strLst.size() > 0;
+        return student;
     }
 
 }
-
-//jdbcTemplate.query(
-//        "SELECT id, first_name, last_name FROM customers WHERE first_name = ?",
-//        new Object[] { "Josh" },
-//        (rs, rowNum) -> new Customer(rs.getLong("id"), rs.getString("first_name"), rs.getString("last_name"))
-//        ).forEach(customer -> log.info(customer.toString()));

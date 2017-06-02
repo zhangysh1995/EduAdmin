@@ -46,12 +46,10 @@ public class StudentController {
 
                         @ModelAttribute("username") String username, @ModelAttribute("password") String password)
     {
-
-        System.out.println("username: " + username + " password: " + password);
-
-        if (StudentManager.validate(username, password)) {
-            model.addAttribute("username", username);
-            model.addAttribute("password", password);
+        Student student = StudentManager.validate(username, password);
+        if ( student != null ) {
+            model.addAttribute("username", student.getUsername());
+            model.addAttribute("password", student.getPassword());
             return "/users/me";
         }
         else return "/users/loginFailed";
