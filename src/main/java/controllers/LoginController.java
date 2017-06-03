@@ -32,6 +32,8 @@ public class LoginController {
         model.addAttribute("password", password);
         if (role.equals("student"))
             return "redirect:/student/login";
+        else if (role.equals("teacher"))
+            return "redirect:/teacher/login";
         else return "/users/loginFailed";
 //        model.addAttribute("username", username);
 //        model.addAttribute("password", password);
