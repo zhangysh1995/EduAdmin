@@ -13,7 +13,7 @@
 </head>
 <body>
 <form:form method="POST" action="/student/change" modelAttribute="student">
-    <h2>You could change your <b>password</b> or click <a href="/student/scores"><b>here</b></a> for scores. </h2>
+    <h2>You could change your <b>password</b> or click <a href="/student/scores?studentNo=${studentNo}"><b>here</b></a> for scores. </h2>
     <table>
         <tr>
             <td><form:label path="username">Username</form:label></td>

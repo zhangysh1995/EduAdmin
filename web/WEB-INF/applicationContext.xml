@@ -22,4 +22,7 @@
         <property name="jdbcTemplate" ref="jdbcTemplate" />
     </bean>
 
+    <bean id="scoreDAO" class="database.ScoreManager">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
 </beans>

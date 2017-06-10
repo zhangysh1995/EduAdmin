@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import roles.impl.Student;
 
 /**
@@ -64,8 +65,11 @@ public class StudentController {
     }
 
     @RequestMapping(value="student/scores", method=RequestMethod.GET)
-    public String scores() {
-        return "/utilities/scores";
+    public String scores(@RequestParam(value = "studentNo", defaultValue = "00000000") String studentNo,
+                         RedirectAttributes model) {
+
+        model.addAttribute("studentNo", studentNo);
+        return "redirect:/myscores";
     }
 
     private Model modelHelper(Model model, Student student) {

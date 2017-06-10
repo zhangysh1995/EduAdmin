@@ -21,8 +21,7 @@ public class LoginController {
     }
 
     @RequestMapping(value="/loginAction.do", method=RequestMethod.POST)
-    public String submit(
-            @RequestParam(value="username", defaultValue= "") String username,
+    public String submit(@RequestParam(value="username", defaultValue= "") String username,
                                @RequestParam(value="password", defaultValue = "") String password,
                                @RequestParam(value="role", defaultValue = "student") String role,
                                RedirectAttributes model

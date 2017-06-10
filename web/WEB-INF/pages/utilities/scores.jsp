@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: KellyZhang
@@ -8,9 +10,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>My Scores-${studentNo}</title>
 </head>
 <body>
-
+<h2>Here are your scores.</h2>>
+    <table>
+        <tr>
+            <td>Course Number </td>
+            <%--<td>Course Name </td>--%>
+            <td>Score </td>
+        </tr>
+    <c:forEach var="score" items="${scores}">
+        <tr>
+            <td><c:out value="${score.getCourseNo()}" /></td>
+            <%--<td>${score.getCourseName()}</td>--%>
+            <td><c:out value="${score.getScore()}" /></td>>
+        </tr>
+    </c:forEach>
+    </table>
 </body>
 </html>
