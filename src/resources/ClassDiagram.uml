@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>controllers.LoginController</OriginalElement>
+  <nodes>
+    <node x="816.0" y="411.0">roles.impl.Teacher</node>
+    <node x="260.0" y="332.0">database.ScoreManager</node>
+    <node x="871.0" y="309.0">roles.Person</node>
+    <node x="229.0" y="135.0">controllers.ScoreController</node>
+    <node x="477.75" y="0.0">org.springframework.stereotype.Controller</node>
+    <node x="850.0" y="636.0">database.StudentManager</node>
+    <node x="1064.0" y="411.0">roles.impl.Student</node>
+    <node x="943.0" y="115.0">controllers.StudentController</node>
+    <node x="602.0" y="116.0">controllers.TeacherController</node>
+    <node x="525.0" y="631.0">database.TeacherManager</node>
+    <node x="0.0" y="146.0">controllers.LoginController</node>
+    <node x="608.0" y="433.0">roles.impl.Administrator</node>
+    <node x="0.0" y="332.0">objects.Score</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="database.TeacherManager" target="roles.impl.Teacher">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="controllers.ScoreController" target="org.springframework.stereotype.Controller">
+      <point x="0.0" y="-48.0" />
+      <point x="380.0" y="82.0" />
+      <point x="529.125" y="82.0" />
+      <point x="-17.125" y="26.0" />
+    </edge>
+    <edge source="controllers.TeacherController" target="roles.impl.Teacher">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="roles.impl.Administrator" target="roles.Person">
+      <point x="0.0" y="-59.0" />
+      <point x="702.0" y="386.0" />
+      <point x="890.6666666666667" y="386.0" />
+      <point x="-39.333333333333314" y="26.0" />
+    </edge>
+    <edge source="roles.impl.Teacher" target="roles.Person">
+      <point x="0.0" y="-81.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="controllers.StudentController" target="org.springframework.stereotype.Controller">
+      <point x="0.0" y="-81.0" />
+      <point x="712.5" y="82.0" />
+      <point x="563.375" y="82.0" />
+      <point x="17.125" y="26.0" />
+    </edge>
+    <edge source="controllers.ScoreController" target="objects.Score">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="database.StudentManager" target="roles.impl.Student">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="database.ScoreManager" target="objects.Score">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="controllers.StudentController" target="roles.impl.Student">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="controllers.TeacherController" target="org.springframework.stereotype.Controller">
+      <point x="0.0" y="-70.0" />
+      <point x="752.5" y="73.0" />
+      <point x="598.625" y="71.0" />
+      <point x="51.375" y="26.0" />
+    </edge>
+    <edge source="roles.impl.Student" target="roles.Person">
+      <point x="0.0" y="-81.0" />
+      <point x="1177.0" y="385.0" />
+      <point x="969.3333333333334" y="386.0" />
+      <point x="39.33333333333337" y="26.0" />
+    </edge>
+    <edge source="controllers.LoginController" target="org.springframework.stereotype.Controller">
+      <point x="0.0" y="-37.0" />
+      <point x="104.5" y="72.0" />
+      <point x="494.875" y="72.0" />
+      <point x="-51.375" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8606511090390955" x="576.1237564086914" y="376.6665573120117" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
