@@ -1,4 +1,3 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
@@ -16,7 +15,7 @@
 <h2>Here are your scores.</h2>>
     <table>
         <tr>
-            <td>Course Number </td>
+            <td>CourseNumber   </td>
             <%--<td>Course Name </td>--%>
             <td>Score </td>
         </tr>

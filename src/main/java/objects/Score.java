@@ -6,6 +6,7 @@ package objects;
 public class Score {
     String courseNo;
     String score;
+    String studentNo;
 
     public String getScore() {
         return score;
@@ -26,5 +27,13 @@ public class Score {
     @Override
     public String toString() {
         return "CourseNo is " + this.getCourseNo() + " Score is " + this.getScore();
+    }
+
+    public String getStudentNo() {
+        return studentNo;
+    }
+
+    public void setStudentNo(String studentNo) {
+        this.studentNo = studentNo;
     }
 }

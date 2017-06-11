@@ -61,11 +61,6 @@ public class TeacherController {
         return "/users/teacherMe";
     }
 
-    @RequestMapping(value="/teacher/scores", method=RequestMethod.GET)
-    public String scores() {
-        return "/utilities/editScores";
-    }
-
     private Model modelHelper(Model model, Teacher teacher) {
         model.addAttribute("username", teacher.getUsername());
         model.addAttribute("password", teacher.getPassword());
